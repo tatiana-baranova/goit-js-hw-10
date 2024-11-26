@@ -7,6 +7,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
 
 const btnStart = document.querySelector("[data-start]");
+const datePicker = document.querySelector("#datetime-picker");
 let userSelectedDate = null;
 let timerId;
 
@@ -36,7 +37,7 @@ flatpickr("#datetime-picker", options);
 btnStart.addEventListener("click", function () {
 if (userSelectedDate) {
     btnStart.disabled = true;
-
+    datePicker.disabled = true;
     timerId = setInterval(() => {
     const deltaTime = userSelectedDate - new Date();
 
@@ -48,6 +49,7 @@ if (userSelectedDate) {
         title: "Success!",
         message: "Timer has finished!",
         });
+        datePicker.disabled = false;
         return;
     }
 
