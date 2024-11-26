@@ -1,1 +1,1 @@
-{"version":3,"file":"2-snackbar.js","sources":["../src/js/2-snackbar.js"],"sourcesContent":["console.log(\"snackbar\");\n"],"names":[],"mappings":"wFAAA,QAAQ,IAAI,UAAU"}
+{"version":3,"file":"2-snackbar.js","sources":["../src/js/2-snackbar.js"],"sourcesContent":["import iziToast from \"izitoast\";\nimport \"izitoast/dist/css/iziToast.min.css\";\nconsole.log(iziToast);\n\n"],"names":["iziToast"],"mappings":"wIAEA,QAAQ,IAAIA,CAAQ"}
