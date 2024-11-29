@@ -20,9 +20,10 @@ onClose(selectedDates) {
     const selectedDate = selectedDates[0];
 
     if (selectedDate <= new Date()) {
-    iziToast.warning({
+    iziToast.error({
         title: 'Warning!',
         message: 'Please choose a date in the future',
+        position: 'topRight',
     });
     btnStart.disabled = true;
     } else {
@@ -48,6 +49,7 @@ if (userSelectedDate) {
         iziToast.success({
         title: "Success!",
         message: "Timer has finished!",
+        position: 'topRight',
         });
         datePicker.disabled = false;
         return;
